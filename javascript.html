@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript CRUD - Forgalomkorlátozás</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1><center>JavaScript CRUD - Forgalomkorlátozás</center></h1>
+    <hr>
+
+    <div class="employee-form">
+        <form onsubmit="event.preventDefault(); onFormSubmit();">
+            <div>
+                <label>Útszám*</label>
+                <label class="validation-error hide" id="utszamValidationError">Ez a mező kötelező.</label>
+                <input type="text" name="utszam" id="utszam">
+            </div>
+
+            <div>
+                <label>Település*</label>
+                <label class="validation-error hide" id="telepulesValidationError">Ez a mező kötelező.</label>
+                <input type="text" name="telepules" id="telepules">
+            </div>
+
+            <div>
+                <label>Kezdet (km)*</label>
+                <input type="text" name="kezdet" id="kezdet">
+            </div>
+
+            <div>
+                <label>Vég (km)*</label>
+                <input type="text" name="veg" id="veg">
+            </div>
+
+            <div>
+                <label>Mettől*</label>
+                <input type="date" name="mettol" id="mettol">
+            </div>
+
+            <div>
+                <label>Meddig*</label>
+                <input type="date" name="meddig" id="meddig">
+            </div>
+
+            <div>
+                <label>Korlátozás oka*</label>
+                <select name="megnevezes" id="megnevezes">
+                    <option value="">Válassz...</option>
+                    <option value="1">kábel fektetés</option>
+                    <option value="2">csomópont építés</option>
+                    <option value="3">kátyúzás</option>
+                    <option value="4">útépítés</option>
+                    <option value="5">aszfaltmarás</option>
+                    <option value="6">árvíz</option>
+                    <option value="7">aszfaltozás</option>
+                    <option value="8">hézagkiöntés</option>
+                    <option value="9">nyomvályú megszüntetés</option>
+                    <option value="10">csatorna</option>
+                    <option value="11">árok- és padkarendezés</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Korlátozás mértéke*</label>
+                <select name="mertek" id="mertek">
+                    <option value="">Válassz...</option>
+                    <option value="1">útszűkület</option>
+                    <option value="2">sávlezárás</option>
+                    <option value="3">félpályás lezárás</option>
+                    <option value="4">teljes lezárás</option>
+                    <option value="5">nincs lezárás</option>
+                    <option value="6">nehezen járható</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Sebesség (km/h)</label>
+                <input type="text" name="sebesseg" id="sebesseg">
+            </div>
+
+            <div class="form-action-buttons">
+                <input type="submit" value="Mentés">
+            </div>
+        </form>
+    </div>
+
+    <br/>
+
+    <div class="employees-table">
+        <table class="list" id="restrictionList">
+            <thead>
+                <tr>
+                    <th>Útszám</th>
+                    <th>Település</th>
+                    <th>Kezdet</th>
+                    <th>Vég</th>
+                    <th>Mettől</th>
+                    <th>Meddig</th>
+                    <th>Ok</th>
+                    <th>Mérték</th>
+                    <th>Sebesség</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

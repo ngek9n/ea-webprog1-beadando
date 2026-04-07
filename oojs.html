@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>OOJS alkalmazás</title>
+  <link rel="stylesheet" href="./css/style.css">
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    font-family: Arial, sans-serif;
+  }
+
+  #info {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 16px 22px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    min-width: 300px;
+  }
+
+  #info h2 {
+    margin-bottom: 8px;
+    font-size: 22px;
+    color: #ffffff;
+  }
+
+  #info p {
+    margin: 0;
+    font-size: 15px;
+    color: #e0e7ff;
+  }
+
+  .ball {
+    position: absolute;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+  <div id="info">
+    <h2>OOJS - Pattogó labdák</h2>
+    <p>Kattints bárhová új labda létrehozásához!</p>
+  </div>
+  <script src="./js/oojs.js"></script>
+</body>
+</html>

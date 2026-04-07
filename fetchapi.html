@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fetch API CRUD</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .form-box {
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 8px;
+      margin-right: 10px;
+      width: 300px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .menu-link {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <a class="menu-link" href="index.html">← Vissza a főoldalra</a>
+
+  <h1>Fetch API CRUD - Mértékek</h1>
+
+  <div class="form-box">
+    <input type="hidden" id="itemId" />
+    <input type="text" id="nev" placeholder="Mérték megnevezése" />
+    <button onclick="saveItem()">Mentés</button>
+    <button onclick="clearForm()">Űrlap törlése</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Név</th>
+        <th>Műveletek</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="js/fetchapi.js"></script>
+</body>
+</html>
